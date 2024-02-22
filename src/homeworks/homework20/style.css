@@ -1,0 +1,12 @@
+.user-card {
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #c6daec;
+  }
+  
+  .user-card h2, p, ul {
+    margin: 10px;
+  }
