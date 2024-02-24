@@ -1,23 +1,18 @@
-function ProfileCard() {
-  const profile = {
-    src: "https://masterpiecer-images.s3.yandex.net/559de8d27b2411eebdb7261105627a54:upscaled",
-    firstName: "Babuin",
-    lastName: "Babuinovich",
-    career: "unemployed",
-    hairColor: "ginger",
-    stature: 110,
-    hobby: "eats bananas",
-  };
+import { ProfileCardProps } from "./type";
+
+import './style.css'
+
+function ProfileCard({src, firstName, lastName, career, hairColor, stature, hobby}: ProfileCardProps) {
 
   return (
     <div className="profile-card">
-      <img src={profile.src} className="profile-avatar" alt="profile-avatar" />
-      <h2>{profile.firstName}</h2>
-      <h2>{profile.lastName}</h2>
-      <p>career: {profile.career}</p>
-      <p>hairColor: {profile.hairColor}</p>
-      <p>stature: {profile.stature}cm</p>
-      <p>hobby: {profile.hobby}</p>
+      <img src={src} className="profile-avatar" alt="profile-avatar" />
+      <h2>{firstName}</h2>
+      <h2>{lastName}</h2>
+      <p>career: {career}</p>
+      <p>hairColor: {hairColor}</p>
+      <p>stature: {stature}cm</p>
+      <p>hobby: {hobby}</p>
     </div>
   );
 }
