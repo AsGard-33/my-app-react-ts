@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+
 import "./style.css";
 
 function Homework20() {
@@ -10,7 +12,6 @@ function Homework20() {
   let programLangs: string[] = ["JavaScript", "Python", "Machine Learning"];
 
   return (
-    <div className="user-box">
     <div className="user-card">
       <h2>
         {firstName} {lastName}
@@ -22,11 +23,10 @@ function Homework20() {
       <p>Email: {email}</p>
       <p>Programming Languages:</p>
       <ul>
-        {programLangs.map((lang) => (
-          <li key={lang}>{lang}</li>
+        {programLangs.map((lang: string) => (
+          <li key={v4()}>{lang}</li>
         ))}
       </ul>
-    </div>
     </div>
   );
 }

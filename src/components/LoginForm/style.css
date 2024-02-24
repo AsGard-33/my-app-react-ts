@@ -1,0 +1,27 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 590px;
+  height: 450px;
+  padding: 60px;
+  border-radius: 4px;
+
+  gap: 40px;
+  background: #f1f8fa;
+  border: 1px solid #000000;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+width: 470px;
+  height: 176px;
+
+  gap: 20px;
+}
+
+.login-title {
+  display: flex;
+  align-items: flex-start;
+  height: 24px;
+}
