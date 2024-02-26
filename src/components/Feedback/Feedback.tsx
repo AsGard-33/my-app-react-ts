@@ -6,9 +6,8 @@ import { FeedbackProps } from "./type";
 
 // import { useState } from "react";
 
-
-
 function Feedback({onthumbsUp,onthumbsDown,handleReset,likes,dislike}: FeedbackProps) {
+  //Ostavil kak primer
   // const [likes, setLikes] = useState(0);
   // const [dislike, setDislikes] = useState(0);
 
