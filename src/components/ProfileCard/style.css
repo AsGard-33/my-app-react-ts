@@ -1,0 +1,39 @@
+.profile-card {
+    border: 1px solid #082229;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    height: 550px;
+    box-shadow: 10px 5px 5px rgba(217, 104, 11, 0.562);
+    text-align: center;
+  }
+
+  .profile-avatar {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* .button-container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  } */
+  
+  /* .car-card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 20px;
+  } */
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    padding: 30px;
+  }
