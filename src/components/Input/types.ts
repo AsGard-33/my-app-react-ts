@@ -19,5 +19,3 @@ export interface InputProps {
   placeholder?: string;
   label: string;
 }
- 
-export{}

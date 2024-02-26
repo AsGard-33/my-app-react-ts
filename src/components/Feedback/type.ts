@@ -5,5 +5,3 @@ export interface FeedbackProps {
     likes: number;
     dislike: number;
   }
-  
-  export{}
