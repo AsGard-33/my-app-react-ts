@@ -1,21 +1,7 @@
-type InputTypes =
-  | "text"
-  | "email"
-  | "password"
-  | "number"
-  | "date"
-  | "url"
-  | "tel"
-  | "search"
-  | "color"
-  | "button"
-  | "submit"
-  | "reset"
-  | undefined;
-
 export interface InputProps {
+  id: string;
   name: string;
-  type: InputTypes;
-  placeholder?: string;
+  placeholder: string;
   label: string;
+  type?: string;
 }

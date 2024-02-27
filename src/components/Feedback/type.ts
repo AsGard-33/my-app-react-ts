@@ -1,7 +1,7 @@
 export interface FeedbackProps {
-    onthumbsUp: () => void;
-    onthumbsDown: () => void;
-    handleReset: () => void;
-    likes: number;
-    dislike: number;
-  }
+  onDislike: () => void;
+  onLike: () => void;
+  resetResults: () => void;
+  likes: number;
+  dislikes: number;
+}

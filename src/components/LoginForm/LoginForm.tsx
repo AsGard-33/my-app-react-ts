@@ -1,29 +1,31 @@
-import "./style.css";
+import "./styles.css";
+
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 
 function LoginForm() {
   return (
-    <div className="login">
-      <h2 className="login-title">Login form</h2>
-      <div className="input-box">
+    <form className="loginform-wrapper">
+      <p className="loginform-name">Login form</p>
+      <div className="inputs-container">
         <Input
+          id="login-email"
+          placeholder="Enter your email"
           name="email"
-          type="email"
-          placeholder="enter email"
           label="Email"
+          type="email"
         />
         <Input
+          id="login-password"
+          placeholder="Enter your password"
           name="password"
-          type="password"
-          placeholder="enter password"
           label="Password"
+          type="password"
         />
       </div>
-      <div>
-        <Button name="Login" type="submit" />
-      </div>
-    </div>
+      <Button name="Login" />
+    </form>
   );
 }
+
 export default LoginForm;
