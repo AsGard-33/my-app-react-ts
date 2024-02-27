@@ -1,11 +1,11 @@
-import { CounterProps } from "./type";
+import {CounterProps} from './type';
 
-import "./style.css";
+import "./styles.css";
 
 import Button from "../Button/Button";
 
-function Counter({count,onMinus,onPlus}: CounterProps) {
-
+function Counter({count, onMinus, onPlus}: CounterProps) {
+  // Управление сотстоянием происходит в самом компоненте
   // // Создаем state для нашего Counter
   // const [count, setCount] = useState(0);
 

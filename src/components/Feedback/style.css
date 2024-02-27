@@ -13,14 +13,14 @@
   color: white;
 }
 
-.button-wrapper {
+.feedback-control {
   display: flex;
   align-items: center;
   gap: 20px;
   width: 100%;
 }
 
-.button-control {
+.buttonwithcount-container {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -28,10 +28,17 @@
 }
 
 .count {
-  font-size: 70px;
+  font-size: 40px;
   color: white;
 }
 
-button:hover {
-  box-shadow: 5px 0px 40px rgb(200, 190, 232);
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-control {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
 }

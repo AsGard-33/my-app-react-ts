@@ -1,42 +1,31 @@
-import "./style.css";
-
 import Button from "../Button/Button";
 
 import { FeedbackProps } from "./type";
+import "./styles.css";
 
-// import { useState } from "react";
-
-function Feedback({onthumbsUp,onthumbsDown,handleReset,likes,dislike}: FeedbackProps) {
-  //Ostavil kak primer
-  // const [likes, setLikes] = useState(0);
-  // const [dislike, setDislikes] = useState(0);
-
-  // const onthumbsUp = () => {
-  //   setLikes((prevValue) => {
-  //     return prevValue + 1;
-  //   });
-  // };
-  // const onthumbsDown = () => {
-  //   setDislikes((prevValue) =>  prevValue + 1);
-  // };
-  // const handleReset = () => {
-  //   setLikes(0);
-  //   setDislikes(0);
-  // };
-
+function Feedback({
+  likes,
+  dislikes,
+  onDislike,
+  onLike,
+  resetResults,
+}: FeedbackProps) {
   return (
     <div className="feedback-wrapper">
-      <div className="button-wrapper">
-        <div className="button-control">
-          <Button name="👍" onClick={onthumbsUp}/>
+      <div className="feedback-control">
+        <div className="buttonwithcount-container">
+          <Button name="Like" onClick={onLike} />
+          {/* <div onClick={onLike} className="image-control">
+            <img className="image" src={Like} alt="Like img" />
+          </div> */}
           <p className="count">{likes}</p>
         </div>
-        <div className="button-control">
-          <Button name="👎" onClick={onthumbsDown} />
-          <p className="count">{dislike}</p>
+        <div className="buttonwithcount-container">
+          <Button name="Dislike" onClick={onDislike} />
+          <p className="count">{dislikes}</p>
         </div>
       </div>
-      <Button name="Reset results🚮" onClick={handleReset} />
+      <Button name="Reset Results" onClick={resetResults} />
     </div>
   );
 }

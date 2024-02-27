@@ -1,18 +1,26 @@
 import { ProfileCardProps } from "./type";
 
-import './style.css'
+import "./style.css";
 
-function ProfileCard({src, firstName, lastName, career, hairColor, stature, hobby}: ProfileCardProps) {
+function ProfileCard({
+  profileData,
+  imgSrc,
+  children = <h1>User Card</h1>,
+}: ProfileCardProps) {
+  const normalizeFirstLastName = () => {
+    return `${profileData.firstName} ${profileData.lastName}`;
+  };
 
   return (
     <div className="profile-card">
-      <img src={src} className="profile-avatar" alt="profile-avatar" />
-      <h2>{firstName}</h2>
-      <h2>{lastName}</h2>
-      <p>career: {career}</p>
-      <p>hairColor: {hairColor}</p>
-      <p>stature: {stature}cm</p>
-      <p>hobby: {hobby}</p>
+      {children}
+      <div className="avatar-control">
+        <img className="profile-avatar" alt="Profile Avatar" src={imgSrc} />
+      </div>
+      <h2>{normalizeFirstLastName()}</h2>
+      <p>Career: {profileData.career}</p>
+      <p>Hair Color: {profileData.hairColor}</p>
+      <p>Hobby: {profileData.hobby}</p>
     </div>
   );
 }
