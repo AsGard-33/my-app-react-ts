@@ -1,4 +1,6 @@
-.profile-card {
+import styled from "@emotion/styled";
+
+export const ProfileCardWraper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,13 +11,17 @@
   border-radius: 8px;
   padding: 20px;
   box-shadow: 10px 5px 5px rgba(217, 104, 11, 0.562);
-}
+`;
 
-.avatar-control {
+export const AvatarControl = styled.div`
   height: 300px;
-}
+`;
 
-.profile-avatar {
+export const ProfileAvatar = styled.img`
   height: 100%;
   width: 100%;
-}
+`;
+
+export const AvatarH2 = styled.h2``;
+
+export const AvatarP = styled.p``;
