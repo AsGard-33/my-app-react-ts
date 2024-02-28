@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Feedback from "../../components/Feedback/Feedback";
 
-import "./styles.css";
+import "./style.css";
 
 function Homework21() {
   // Создаем state для likes

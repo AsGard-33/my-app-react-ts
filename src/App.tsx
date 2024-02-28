@@ -6,6 +6,7 @@ import './App.css';
 
 // import Homework20 from './homeworks/homework20/Homework20';
 // import Homework21 from './homeworks/homework21/Homework21';
+import Homework22 from 'homeworks/homework22/Homework22';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <Lesson22/> */}
       {/* <Homework20/> */}
       {/* <Homework21/> */}
+      <Homework22/>
     </div>
   );
 }

@@ -5,4 +5,5 @@ export interface ButtonProps {
   isRed?: boolean;
   type?: ButtonTypes;
   onClick?: () => void;
+  disabled?: boolean;
 }
