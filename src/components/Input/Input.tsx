@@ -12,11 +12,15 @@ function Input({
   label,
   type = "text",
   disabled = false,
+  value,
+  onChange,
 }: InputProps) {
   return (
     <InputcomponentContainer>
       <InputcomponentLabel htmlFor={id}>{label}</InputcomponentLabel>
       <InputComponent
+        value={value}
+        onChange={onChange}
         name={name}
         id={id}
         placeholder={placeholder}
