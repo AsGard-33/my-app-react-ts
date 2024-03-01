@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 
 import Input from "components/Input/Input";
 
@@ -13,23 +13,24 @@ import {
   InfoBoxP2,
 } from "./styles";
 
+import { EmployeeState } from "./types";
+
 function EmployeeForm() {
-  const [employee, setEmployee] = useState({
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [age, setAge] = useState("");
+  const [position, setPosition] = useState("");
+  const [employee, setEmployee] = useState<EmployeeState>({
     firstName: "",
     lastName: "",
     age: "",
     position: "",
   });
-  const [showCard, setShowCard] = useState(false);
-
-  const handleChange = (inputEvent: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = inputEvent.target;
-    setEmployee({ ...employee, [name]: value });
-  };
+  const [showCard, setShowCard] = useState<boolean>(false);
 
   const handleSubmit = () => {
-    const { firstName, lastName, age, position } = employee;
     if (firstName && lastName && age && position) {
+      setEmployee({ firstName, lastName, age, position });
       setShowCard(true);
     } else {
       alert("Введите данные сотрудника");
@@ -44,32 +45,33 @@ function EmployeeForm() {
           name="firstName"
           placeholder="Имя"
           label="Имя"
-          value={employee.firstName}
-          onChange={handleChange}
+          value={firstName}
+          onChange={(inputEvent) => setFirstName(inputEvent.target.value)}
         />
+
         <Input
           id="lastName"
           name="lastName"
           placeholder="Фамилия"
           label="Фамилия"
-          value={employee.lastName}
-          onChange={handleChange}
+          value={lastName}
+          onChange={(inputEvent) => setLastName(inputEvent.target.value)}
         />
         <Input
           id="age"
           name="age"
           placeholder="Возраст"
           label="Возраст"
-          value={employee.age}
-          onChange={handleChange}
+          value={age}
+          onChange={(inputEvent) => setAge(inputEvent.target.value)}
         />
         <Input
           id="position"
           name="position"
           placeholder="Должность"
           label="Должность"
-          value={employee.position}
-          onChange={handleChange}
+          value={position}
+          onChange={(inputEvent) => setPosition(inputEvent.target.value)}
         />
         <Button name="Создать" onClick={handleSubmit} />
       </InputContainer>
