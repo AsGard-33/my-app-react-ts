@@ -33,7 +33,8 @@ function EmployeeForm() {
       setEmployee({ firstName, lastName, age, position });
       setShowCard(true);
     } else {
-      alert("Введите данные сотрудника");
+      setShowCard(false);
+      setTimeout(() => alert("Введите данные во все поля"), 0);
     }
   };
 
