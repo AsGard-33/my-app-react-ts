@@ -49,7 +49,7 @@ function Lesson24() {
     if (!!catFact) {
       getCatFact();
     }
-  }, [inputValue]);
+  }, [inputValue, catFact]);
 
   // 3 метод - unmounting(вызывается, при удалении компонента из DOM)
   // Тут можно например: чистить данные из localstorage или Redux store
