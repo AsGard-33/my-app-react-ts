@@ -26,7 +26,7 @@ export const JokePunchline = styled.p``;
 
 export const JokeSetup = styled.h3``;
 
-export const Div = styled.div``;
+export const JokeContainer = styled.div``;
 
 export const PageStyle = styled.div`
   display: flex;

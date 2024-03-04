@@ -6,7 +6,7 @@ import {
   JokePunchline,
   JokeSetup,
   PageStyle,
-  Div,
+  JokeContainer,
 } from "./styles";
 import { Joke } from "./types";
 import Button from "components/Button/Button";
@@ -41,7 +41,7 @@ function Homework24() {
   return (
     <PageStyle>
       <Homework24Wrapper>
-        <Div>
+        <JokeContainer>
           {error && <ErrorJoke>{error}</ErrorJoke>}
           {joke && (
             <JokeCard>
@@ -50,7 +50,7 @@ function Homework24() {
             </JokeCard>
           )}
           <Button name="Получить шутку" onClick={fetchJoke} />
-        </Div>
+        </JokeContainer>
       </Homework24Wrapper>
     </PageStyle>
   );
