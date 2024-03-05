@@ -1,33 +1,37 @@
 import { InputProps } from "./types";
 import {
+  InputContainer,
   InputComponent,
-  InputcomponentLabel,
-  InputcomponentContainer,
-} from "./style";
+  InputLabel,
+  ErrorContainer,
+} from "./styles";
 
 function Input({
   id,
+  disabled = false,
   name,
   placeholder,
   label,
   type = "text",
-  disabled = false,
   value,
   onChange,
+  error,
 }: InputProps) {
   return (
-    <InputcomponentContainer>
-      <InputcomponentLabel htmlFor={id}>{label}</InputcomponentLabel>
+    <InputContainer>
+      <InputLabel htmlFor={id}>{label}</InputLabel>
       <InputComponent
         value={value}
         onChange={onChange}
         name={name}
         id={id}
+        disabled={disabled}
         placeholder={placeholder}
         type={type}
-        disabled={disabled}
       />
-    </InputcomponentContainer>
+      {/* {!!error && <ErrorContainer>{error}</ErrorContainer>} */}
+      <ErrorContainer>{error}</ErrorContainer>
+    </InputContainer>
   );
 }
 

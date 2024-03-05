@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const InputcomponentContainer = styled.div`
+export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -8,7 +8,7 @@ export const InputcomponentContainer = styled.div`
   height: fit-content;
 `;
 
-export const InputcomponentLabel = styled.label`
+export const InputLabel = styled.label`
   font-size: 16px;
   color: #6f6f6f;
 `;
@@ -21,13 +21,21 @@ export const InputComponent = styled.input`
   border: 1px solid black;
   border-radius: 4px;
   font-size: 16px;
+  background-color: ${({ disabled }) =>
+    disabled ? "lightgrey" : "transparent"};
 
   &::placeholder {
     color: #6f6f6f;
   }
 
-  &:disabled {
-    background-color: #e0e0e0;
-    cursor: not-allowed;
+  &:hover {
+    border: ${({ disabled }) =>
+      disabled ? "1px solid black" : "1px solid #1f27f5"};
   }
+`;
+
+export const ErrorContainer = styled.div`
+  font-size: 16px;
+  color: red;
+  height: 18px;
 `;
