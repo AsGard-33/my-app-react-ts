@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const LoginformWrapper = styled.form`
+export const LoginFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -12,7 +12,7 @@ export const LoginformWrapper = styled.form`
   background-color: white;
 `;
 
-export const LoginformName =styled.p`
+export const LoginFormTitle = styled.p`
   font-size: 24px;
 `;
 
