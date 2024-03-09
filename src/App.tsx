@@ -7,6 +7,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "pages/About/About";
 import Home from "pages/Home/Home";
 import Users from "pages/Users/Users";
+import Clients from "pages/Clients/Company";
+import Facebook from "pages/Clients/Facebook/Facebook";
+import IBM from "pages/Clients/IBM/IBM";
+import Porsche from "pages/Clients/Porsche/Porsche";
 
 //Lesson
 // import Lesson20 from './lessons/lesson20/Lesson20';
@@ -30,8 +34,12 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/users" element={<Users/>} />
-          <Route path="/about" element={<About/>} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/facebook" element={<Facebook />} />
+          <Route path="/clients/ibm" element={<IBM />} />
+          <Route path="/clients/porsche" element={<Porsche />} />
           <Route path="*" element="Page Not Found" />
         </Routes>
       </Layout>

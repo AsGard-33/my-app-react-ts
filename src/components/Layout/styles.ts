@@ -39,6 +39,12 @@ export const NavContainer = styled.nav`
   gap: 10px;
 `;
 
+export const NavContainerFooter = styled.nav`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
@@ -47,9 +53,10 @@ export const Main = styled.main`
 
 export const Footer = styled.footer`
   display: flex;
+  justify-content: center;
   padding: 30px;
   width: 100%;
-  height: 100px;
+  height: 150px;
   background-color: ${colors.primary};
   color: white;
 `;
