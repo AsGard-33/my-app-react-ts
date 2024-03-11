@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "pages/About/About";
 import Home from "pages/Home/Home";
 import Users from "pages/Users/Users";
-import Clients from "pages/Clients/Company";
+import Clients from "pages/Clients/Clients";
 import Facebook from "pages/Clients/Facebook/Facebook";
 import IBM from "pages/Clients/IBM/IBM";
 import Porsche from "pages/Clients/Porsche/Porsche";
