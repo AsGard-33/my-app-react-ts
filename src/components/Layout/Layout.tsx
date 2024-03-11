@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import { LayoutProps } from "./types";
 import {
   LayoutWrapper,
@@ -8,6 +10,7 @@ import {
   Main,
   Footer,
   StyledNavLink,
+  NavContainerFooter,
 } from "./styles";
 
 function Layout({ children }: LayoutProps) {
@@ -15,7 +18,9 @@ function Layout({ children }: LayoutProps) {
     <LayoutWrapper>
       <Header>
         <HeaderLogoContainer>
-          <HeaderLogo />
+          <NavLink to="/">
+            <HeaderLogo />
+          </NavLink>
         </HeaderLogoContainer>
         <NavContainer>
           <StyledNavLink
@@ -42,10 +47,53 @@ function Layout({ children }: LayoutProps) {
           >
             About
           </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/clients"
+          >
+            Clients
+          </StyledNavLink>
         </NavContainer>
       </Header>
       <Main>{children}</Main>
-      <Footer></Footer>
+      <Footer>
+        <NavContainerFooter>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/"
+          >
+            Home
+          </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/users"
+          >
+            Users
+          </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/about"
+          >
+            About
+          </StyledNavLink>
+          <StyledNavLink
+            style={({ isActive }) => ({
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/clients"
+          >
+            Clients
+          </StyledNavLink>
+        </NavContainerFooter>
+      </Footer>
     </LayoutWrapper>
   );
 }
