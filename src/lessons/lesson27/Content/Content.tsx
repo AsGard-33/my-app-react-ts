@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MainContext } from "../Main/Main";  
+import { MainContext } from "../Main/Main"; 
 
 import { ContentWrapper, ContentInfo, ContentTitle } from "./styles";
 

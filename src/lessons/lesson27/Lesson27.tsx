@@ -1,4 +1,4 @@
-import Main from "lessons/Lesson27/Main/Main";
+import Main from "./Main/Main";
 
 import { Lesson27Wrapper } from "./styles";
 
