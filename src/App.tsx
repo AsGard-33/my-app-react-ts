@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Facebook from "pages/Clients/Facebook/Facebook";
 // import IBM from "pages/Clients/IBM/IBM";
 // import Porsche from "pages/Clients/Porsche/Porsche";
+import Weather from "pages/Weather/Weather";
 
 //Lesson
 // import Lesson20 from './lessons/lesson20/Lesson20';
@@ -27,7 +28,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Homework23 from "homeworks/homework23/Homework23";
 // import Homework24 from "homeworks/homework24/Homework24";
 // import Homework25 from "homeworks/homework25/Homework25";
-import Homework27 from "homeworks/homework27/Homework27";
+// import Homework27 from "homeworks/homework27/Homework27";
 
 function App() {
   return (
@@ -58,7 +59,8 @@ function App() {
       {/* <Homework23/> */}
       {/* <Homework24/> */}
       {/* <Homework25/> */}
-      <Homework27/>
+      {/* <Homework27/> */}
+      <Weather />
     </BrowserRouter>
   );
 }
