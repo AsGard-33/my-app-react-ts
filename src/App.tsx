@@ -1,16 +1,16 @@
 import GlobalStyles from "styles/GlobalStyles";
-import Layout from "components/Layout/Layout";
+// import Layout from "components/Layout/Layout";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //Pages
-import About from "pages/About/About";
-import Home from "pages/Home/Home";
-import Users from "pages/Users/Users";
-import Clients from "pages/Clients/Clients";
-import Facebook from "pages/Clients/Facebook/Facebook";
-import IBM from "pages/Clients/IBM/IBM";
-import Porsche from "pages/Clients/Porsche/Porsche";
+// import About from "pages/About/About";
+// import Home from "pages/Home/Home";
+// import Users from "pages/Users/Users";
+// import Clients from "pages/Clients/Clients";
+// import Facebook from "pages/Clients/Facebook/Facebook";
+// import IBM from "pages/Clients/IBM/IBM";
+// import Porsche from "pages/Clients/Porsche/Porsche";
 
 //Lesson
 // import Lesson20 from './lessons/lesson20/Lesson20';
@@ -19,6 +19,7 @@ import Porsche from "pages/Clients/Porsche/Porsche";
 // import Lesson23 from "lessons/lesson23/Lesson23";
 // import Lesson24 from "lessons/lesson24/Lesson24";
 // import Lesson25 from "lessons/lesson25/Lesson25";
+// import Lesson27 from "lessons/lesson27/Lesson27";
 
 // import Homework20 from './homeworks/homework20/Homework20';
 // import Homework21 from './homeworks/homework21/Homework21';
@@ -26,12 +27,13 @@ import Porsche from "pages/Clients/Porsche/Porsche";
 // import Homework23 from "homeworks/homework23/Homework23";
 // import Homework24 from "homeworks/homework24/Homework24";
 // import Homework25 from "homeworks/homework25/Homework25";
+import Homework27 from "homeworks/homework27/Homework27";
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
@@ -42,19 +44,21 @@ function App() {
           <Route path="/clients/porsche" element={<Porsche />} />
           <Route path="*" element="Page Not Found" />
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* <Lesson20/> */}
       {/* <Lesson21/> */}
       {/* <Lesson22/> */}
       {/* <Lesson23 /> */}
       {/* <Lesson24/> */}
       {/* <Lesson25/> */}
+      {/* <Lesson27/> */}
       {/* <Homework20/> */}
       {/* <Homework21/> */}
       {/* <Homework22/> */}
       {/* <Homework23/> */}
       {/* <Homework24/> */}
       {/* <Homework25/> */}
+      <Homework27/>
     </BrowserRouter>
   );
 }
