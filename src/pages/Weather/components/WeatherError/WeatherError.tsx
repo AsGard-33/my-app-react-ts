@@ -3,7 +3,7 @@
 import { WeatherErrorProps } from "./types"
 import { WeatherError1, ErrorBox, ApiError, ErrorMessage } from "./styles";
 
-const WeatherError: React.FC<WeatherErrorProps> = ({ message }) => {
+const WeatherError = ({ message }: WeatherErrorProps) =>  {
   return (
     <WeatherError1>
       <ErrorBox>

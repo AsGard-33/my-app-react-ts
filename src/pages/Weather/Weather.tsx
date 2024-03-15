@@ -13,15 +13,6 @@ import WeatherInfo from "./components/WeatherInfo/WeatherInfo";
 import WeatherError from "./components/WeatherError/WeatherError";
 import { WeatherData } from "./types";
 
-// interface WeatherData {
-//   name: string;
-//   main: {
-//     temp: number;
-//     feels_like: number;
-//   };
-//   weather: [{ description: string; icon: string }];
-// }
-
 function Weather() {
   const [cityName, setCityName] = useState<string>("");
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
@@ -61,8 +52,6 @@ function Weather() {
       setLoading(false);
     }
   };
-
-  console.log({ loading, error, weatherData });
   
   return (
     <WeatherWrapper>
